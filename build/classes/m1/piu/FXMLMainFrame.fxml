@@ -8,8 +8,6 @@
 
 <AnchorPane id="AnchorPane" prefHeight="353.0002999999924" prefWidth="551.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="m1.piu.FXMLMainFrameController">
   <children>
-    <Button id="button" fx:id="button_hello" layoutX="240.0" layoutY="185.0" onAction="#handleButtonAction" text="Click Me!" />
-    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
     <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="551.0">
       <menus>
         <Menu mnemonicParsing="false" text="File">
@@ -52,9 +50,27 @@
             <Label layoutX="9.0" layoutY="38.0" prefWidth="130.0" style="" text="Professional contacts" />
             <Label layoutX="9.0" layoutY="54.0" prefWidth="130.0" style="" text="Student contacts" />
             <Label layoutX="9.0" layoutY="70.0" prefWidth="130.0" style="" text="Other contacts" />
+            <Button id="button" fx:id="button_hello" layoutX="42.0" layoutY="209.0" onAction="#handleButtonAction" text="Click Me!" />
           </children>
         </AnchorPane>
       </content>
     </TitledPane>
+    <TitledPane animated="false" layoutX="156.0" layoutY="56.0" text="Contacts">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="96.50015258789062" prefWidth="393.0">
+          <children>
+            <ScrollBar layoutX="381.0" layoutY="0.0" orientation="VERTICAL" prefHeight="97.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TableView editable="false" layoutX="158.0" layoutY="80.0" prefHeight="96.50015258789062" prefWidth="379.0">
+      <columns>
+        <TableColumn prefWidth="75.0" style="" text="Prénom" />
+        <TableColumn prefWidth="75.0" text="Nom" />
+        <TableColumn prefWidth="75.0" text="Email" />
+      </columns>
+    </TableView>
+    <ListView layoutX="158.0" layoutY="104.0" orientation="VERTICAL" prefHeight="72.50015258789062" prefWidth="379.0" />
   </children>
 </AnchorPane>

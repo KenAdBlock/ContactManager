@@ -71,5 +71,6 @@
         <TableColumn prefWidth="75.0" text="Email" />
       </columns>
     </TableView>
+    <ListView layoutX="158.0" layoutY="104.0" orientation="VERTICAL" prefHeight="72.50015258789062" prefWidth="379.0" />
   </children>
 </AnchorPane>
