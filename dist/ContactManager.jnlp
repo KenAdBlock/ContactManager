@@ -8,7 +8,9 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ContactManager.jar" size="3834" download="eager" />
+    <jar href="ContactManager.jar" size="3471" download="eager" />
+    <jar href="lib/fontawesomefx-8.0.10.jar" size="108930" download="eager" />
+    <jar href="lib/jfoenix.jar" size="2454308" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ContactManager" >
     <param name="requiredFXVersion" value="8.0+"/>
