@@ -1,75 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="353.0002999999924" prefWidth="551.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="m1.piu.FXMLMainFrameController">
-  <children>
-    <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="551.0">
-      <menus>
-        <Menu mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open..." />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save as..." />
-            <MenuItem mnemonicParsing="false" text="Exit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-    <ToolBar layoutX="0.0" layoutY="24.0" prefWidth="551.0">
-      <items>
-        <Button mnemonicParsing="false" text="Add" />
-        <Button mnemonicParsing="false" text="Edit" />
-        <Button mnemonicParsing="false" text="Delete" />
-        <TextField prefWidth="150.0" text="Search..." translateX="220.0" />
-      </items>
-    </ToolBar>
-    <ToolBar layoutX="0.0" layoutY="326.0" prefWidth="551.0" style="-fx-background-color : #ddd">
-      <items>
-        <Label style="-fx-font-weight : bold" text="Selected contact :" />
-        <Label style="" text="Toto Azerty" />
-      </items>
-    </ToolBar>
-    <TitledPane animated="false" layoutX="-1.0" layoutY="56.0" minWidth="157.0" prefHeight="270.0" prefWidth="157.0" text="Address books">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="244.0" prefWidth="141.0">
-          <children>
-            <ScrollBar layoutX="141.0" layoutY="0.0" orientation="VERTICAL" prefHeight="244.0" />
-            <Label id="labelAllContacts" layoutX="9.0" layoutY="6.0" onMouseClicked="#handleButtonLabelAllContacts" prefWidth="130.0" style="-fx-font-weight : bold" text="All contacts" />
-            <Label layoutX="9.0" layoutY="22.0" prefWidth="130.0" style="" text="Private contacts" />
-            <Label layoutX="9.0" layoutY="38.0" prefWidth="130.0" style="" text="Professional contacts" />
-            <Label layoutX="9.0" layoutY="54.0" prefWidth="130.0" style="" text="Student contacts" />
-            <Label layoutX="9.0" layoutY="70.0" prefWidth="130.0" style="" text="Other contacts" />
-            <Button id="button" fx:id="button_hello" layoutX="42.0" layoutY="209.0" onAction="#handleButtonAction" text="Click Me!" />
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-    <TitledPane animated="false" layoutX="156.0" layoutY="56.0" text="Contacts">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="96.50015258789062" prefWidth="393.0">
-          <children>
-            <ScrollBar layoutX="381.0" layoutY="0.0" orientation="VERTICAL" prefHeight="97.0" />
-          </children>
-        </AnchorPane>
-      </content>
-    </TitledPane>
-    <TableView editable="false" layoutX="158.0" layoutY="80.0" prefHeight="96.50015258789062" prefWidth="379.0">
-      <columns>
-        <TableColumn prefWidth="75.0" style="" text="Prénom" />
-        <TableColumn prefWidth="75.0" text="Nom" />
-        <TableColumn prefWidth="75.0" text="Email" />
-      </columns>
-    </TableView>
-  </children>
-</AnchorPane>
+<BorderPane prefHeight="354.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox prefHeight="60.0" prefWidth="551.0" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar prefWidth="551.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="New" />
+                                <MenuItem mnemonicParsing="false" text="Open..." />
+                                <MenuItem mnemonicParsing="false" text="Save" />
+                                <MenuItem mnemonicParsing="false" text="Save as..." />
+                                <MenuItem mnemonicParsing="false" text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <ToolBar prefWidth="551.0">
+                    <items>
+                        <Button mnemonicParsing="false" text="Add" />
+                        <Button mnemonicParsing="false" text="Edit" />
+                        <Button mnemonicParsing="false" text="Delete" />
+                        <TextField prefWidth="150.0" text="Search..." translateX="220.0" />
+                    </items>
+                </ToolBar>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <ToolBar prefWidth="551.0" style="-fx-background-color : #ddd" BorderPane.alignment="CENTER">
+            <items>
+                <Label style="-fx-font-weight : bold" text="Selected contact :" />
+                <Label style="" text="Toto Azerty" />
+            </items>
+        </ToolBar>
+    </bottom>
+</BorderPane>
