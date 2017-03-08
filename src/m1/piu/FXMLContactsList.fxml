@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="239.0" prefWidth="364.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <ToolBar prefHeight="30.0" prefWidth="364.0">
+         <items>
+            <Label style="-fx-font-weight: bold;" text="Contacts list" />
+         </items>
+      </ToolBar>
+      <ListView layoutY="30.0" prefHeight="80.0" prefWidth="364.0" />
+      <ScrollBar layoutX="350.0" layoutY="30.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="14.0" />
+      <ToolBar layoutY="129.0" prefHeight="30.0" prefWidth="364.0">
+         <items>
+            <Label style="-fx-font-weight: bold;" text="Contact details" />
+         </items>
+      </ToolBar>
+      <ListView layoutY="159.0" prefHeight="80.0" prefWidth="364.0" />
+      <ScrollBar layoutX="350.0" layoutY="159.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="14.0" />
+   </children>
+</AnchorPane>
