@@ -7,21 +7,30 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="239.0" prefWidth="364.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="643.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
    <children>
-      <ToolBar prefHeight="30.0" prefWidth="364.0">
+      <ToolBar prefHeight="30.0" prefWidth="643.0">
          <items>
             <Label style="-fx-font-weight: bold;" text="Contacts list" />
          </items>
       </ToolBar>
-      <ListView layoutY="30.0" prefHeight="80.0" prefWidth="364.0" />
-      <ScrollBar layoutX="350.0" layoutY="30.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="14.0" />
-      <ToolBar layoutY="129.0" prefHeight="30.0" prefWidth="364.0">
+      <ListView layoutY="30.0" prefHeight="128.0" prefWidth="643.0" />
+      <ScrollBar layoutX="629.0" layoutY="30.0" orientation="VERTICAL" prefHeight="128.0" prefWidth="14.0" />
+      <ToolBar layoutY="158.0" prefHeight="30.0" prefWidth="643.0">
          <items>
             <Label style="-fx-font-weight: bold;" text="Contact details" />
+            <Label text="Toto Azerty" />
          </items>
       </ToolBar>
-      <ListView layoutY="159.0" prefHeight="80.0" prefWidth="364.0" />
-      <ScrollBar layoutX="350.0" layoutY="159.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="14.0" />
+      <ToolBar layoutX="5.0" layoutY="188.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
+         <items>
+            <Label text="Identity" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <ToolBar layoutX="321.0" layoutY="188.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
+         <items>
+            <Label text="Address" textFill="WHITE" />
+         </items>
+      </ToolBar>
    </children>
 </AnchorPane>

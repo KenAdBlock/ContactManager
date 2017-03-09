@@ -55,7 +55,24 @@ public class ContactManagerFX extends Application {
             AnchorPane leftPanel = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
-            rootLayout.setCenter(leftPanel);
+            rootLayout.setLeft(leftPanel);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
+        public void showCenterPanel() {
+        try {
+            // Load pages overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("FXMLContactsList.fxml"));
+            AnchorPane centerPanel = (AnchorPane) loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(centerPanel);
 
 
         } catch (IOException e) {
@@ -74,6 +91,8 @@ public class ContactManagerFX extends Application {
         initRootLayout();
         
         showLeftPanel();
+        
+        showCenterPanel();
         
 
     }
