@@ -5,12 +5,19 @@
  */
 package m1.piu;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  *
@@ -21,6 +28,15 @@ public class FXMLMainFrameController implements Initializable {
     @FXML
     private Label label;
     private Label labelAllContacts;
+    
+    @FXML
+    private AnchorPane identityPane;
+    
+    @FXML
+    private AnchorPane phonePane;
+    
+    @FXML
+    private AnchorPane addressPane;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -42,5 +58,73 @@ public class FXMLMainFrameController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    
+    @FXML
+    private void btnAddContactClick() {
+       
+        Parent root;
+        
+        try {
+            // Creating a new window
+            FXMLLoader loader = new FXMLLoader();
+            root = loader.load(getClass().getResource("FXMLContactFrame.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Nouveau contact");
+            Scene sceneNewContact = new Scene(root);
+            //sceneNewContact.getStylesheets().add("css/stylesheet.css");
+            
+            stage.setScene(sceneNewContact);
+            
+//            AnchorPane identity = getPane("FXMLContactIdentity");
+           // identityPane.setText("test");
+            
+            // Setting the FXML to the different pane
+            loadPane(sceneNewContact,"#identityPane","FXMLContactIdentity.fxml");               
+            loadPane(sceneNewContact,"#phonePane","FXMLContactPhone.fxml");
+            loadPane(sceneNewContact,"#addressPane","FXMLContactAddress.fxml");
+                       
+            
+            stage.setResizable(false);
+            stage.show();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        
+        
+    }
+    
+    
+    public AnchorPane getPane(String name) {
+
+        AnchorPane pane = null;
+
+        try {
+            // Load pages overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource(name + ".fxml"));
+            pane = (AnchorPane) loader.load();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return pane;
+    }
+    
+    private void loadPane(Scene scene, String paneToSet, String fxmlToLoad) throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            AnchorPane anchorPaneToSet = (AnchorPane) scene.lookup(paneToSet);
+            loader.setLocation(getClass().getResource(fxmlToLoad));
+            AnchorPane ap = (AnchorPane) loader.load();
+            anchorPaneToSet.getChildren().setAll(ap);
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+    }
     
 }

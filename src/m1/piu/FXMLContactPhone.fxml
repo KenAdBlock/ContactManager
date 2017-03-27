@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="phonePane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="300.0" prefWidth="400.0">
+         <children>
+            <Pane prefHeight="300.0" prefWidth="370.0">
+               <children>
+                  <TableView layoutX="6.0" layoutY="19.0" prefHeight="247.0" prefWidth="270.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="Prefix" />
+                      <TableColumn prefWidth="75.0" text="Number" />
+                        <TableColumn prefWidth="75.0" text="Type" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+            <VBox alignment="TOP_RIGHT" prefHeight="300.0" prefWidth="215.0" translateX="-14.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" text="Add" translateY="20.0">
+                     <font>
+                        <Font name="Roboto Regular" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="12.0" layoutY="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" text="Remove" translateY="60.0">
+                     <font>
+                        <Font name="Roboto Regular" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="12.0" layoutY="41.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" text="Up" translateY="100.0">
+                     <font>
+                        <Font name="Roboto Regular" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="12.0" layoutY="72.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" text="Down" translateY="140.0">
+                     <font>
+                        <Font name="Roboto Regular" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
