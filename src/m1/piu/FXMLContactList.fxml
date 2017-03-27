@@ -10,12 +10,13 @@
     <children>
         <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <ListView layoutY="30.0" minHeight="-Infinity" prefHeight="128.0" prefWidth="643.0" />
-                <ToolBar prefHeight="30.0" prefWidth="643.0" StackPane.alignment="TOP_CENTER">
-                    <items>
-                        <Label style="-fx-font-weight: bold;" text="Contacts list" />
-                    </items>
-                </ToolBar>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn prefWidth="145.0" text="First Name" />
+                <TableColumn minWidth="5.0" prefWidth="188.0" text="Last Name" />
+                  <TableColumn minWidth="0.0" prefWidth="252.0" text="Email" />
+              </columns>
+            </TableView>
             </children>
         </StackPane>
     </children>

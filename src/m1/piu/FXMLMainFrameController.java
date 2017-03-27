@@ -70,19 +70,48 @@ public class FXMLMainFrameController implements Initializable {
             FXMLLoader loader = new FXMLLoader();
             root = loader.load(getClass().getResource("FXMLContactFrame.fxml"));
             Stage stage = new Stage();
-            stage.setTitle("Nouveau contact");
+            stage.setTitle("New contact");
             Scene sceneNewContact = new Scene(root);
-            //sceneNewContact.getStylesheets().add("css/stylesheet.css");
             
             stage.setScene(sceneNewContact);
-            
-//            AnchorPane identity = getPane("FXMLContactIdentity");
-           // identityPane.setText("test");
-            
+
             // Setting the FXML to the different pane
             loadPane(sceneNewContact,"#identityPane","FXMLContactIdentity.fxml");               
             loadPane(sceneNewContact,"#phonePane","FXMLContactPhone.fxml");
             loadPane(sceneNewContact,"#addressPane","FXMLContactAddress.fxml");
+                       
+            
+            stage.setResizable(false);
+            stage.show();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        
+        
+    }
+    
+    
+    
+    @FXML
+    private void btnAddPhoneClick() {
+       
+        Parent root;
+        
+        try {
+            // Creating a new window
+            FXMLLoader loader = new FXMLLoader();
+            root = loader.load(getClass().getResource("FXMLContactPhoneFrame.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Add Phone number");
+            Scene sceneNewContact = new Scene(root);
+            
+            stage.setScene(sceneNewContact);
+            
+            // Setting the FXML to the different pane
+            //loadPane(sceneNewContact,"#identityPane","FXMLContactPhone.fxml");               
+           
                        
             
             stage.setResizable(false);

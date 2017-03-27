@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="phonePane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="phonePane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="m1.piu.FXMLMainFrameController">
    <children>
       <HBox prefHeight="300.0" prefWidth="400.0">
          <children>
@@ -23,7 +23,7 @@
                </children></Pane>
             <VBox alignment="TOP_RIGHT" prefHeight="300.0" prefWidth="215.0" translateX="-14.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="98.0" text="Add" translateY="20.0">
+                  <Button fx:id="btnAddPhone" mnemonicParsing="false" onAction="#btnAddPhoneClick" prefHeight="31.0" prefWidth="98.0" text="Add" translateY="20.0">
                      <font>
                         <Font name="Roboto Regular" size="15.0" />
                      </font>
