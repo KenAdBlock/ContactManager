@@ -6,8 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="643.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ToolBar prefHeight="30.0" prefWidth="643.0">
          <items>
@@ -15,22 +14,63 @@
          </items>
       </ToolBar>
       <ListView layoutY="30.0" prefHeight="128.0" prefWidth="643.0" />
-      <ScrollBar layoutX="629.0" layoutY="30.0" orientation="VERTICAL" prefHeight="128.0" prefWidth="14.0" />
       <ToolBar layoutY="158.0" prefHeight="30.0" prefWidth="643.0">
          <items>
             <Label style="-fx-font-weight: bold;" text="Contact details" />
             <Label text="Toto Azerty" />
          </items>
       </ToolBar>
-      <ToolBar layoutX="5.0" layoutY="188.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
+      <ToolBar layoutX="5.0" layoutY="193.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
          <items>
             <Label text="Identity" textFill="WHITE" />
          </items>
       </ToolBar>
-      <ToolBar layoutX="321.0" layoutY="188.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
+      <Pane layoutX="5.0" layoutY="227.0" prefHeight="108.0" prefWidth="311.0" style="-fx-border-color: #666; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" style="-fx-font-weight: bold;" text="Name :" />
+            <Label layoutX="96.0" layoutY="7.0" text="Mr. Toto Azerty" />
+            <Label layoutX="25.0" layoutY="45.0" style="-fx-font-weight: bold;" text="Age :" />
+            <Label layoutX="96.0" layoutY="45.0" text="23" />
+            <Label layoutX="17.0" layoutY="84.0" style="-fx-font-weight: bold;" text="Email :" />
+            <Label layoutX="96.0" layoutY="84.0" text="toto.azerty@gmail.com" />
+         </children>
+      </Pane>
+      <ToolBar layoutX="322.0" layoutY="193.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
+         <items>
+            <Label text="Phone numbers" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <Pane layoutX="322.0" layoutY="227.0" prefHeight="108.0" prefWidth="311.0" style="-fx-border-color: #666; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="8.0" layoutY="7.0" style="-fx-font-weight: bold;" text="Mobile :" />
+            <Label layoutX="96.0" layoutY="7.0" text="06 12 34 57 89" />
+            <Label layoutX="14.0" layoutY="45.0" style="-fx-font-weight: bold;" text="Office :" />
+            <Label layoutX="96.0" layoutY="45.0" text="04 91 23 56 78" />
+            <Label layoutX="16.0" layoutY="84.0" style="-fx-font-weight: bold;" text="Other :" />
+            <Label layoutX="96.0" layoutY="84.0" text="+33 000 000 001" />
+         </children>
+      </Pane>
+      <ToolBar layoutX="5.0" layoutY="347.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
          <items>
             <Label text="Address" textFill="WHITE" />
          </items>
       </ToolBar>
+      <Pane layoutX="5.0" layoutY="381.0" prefHeight="85.0" prefWidth="311.0" style="-fx-border-color: #666; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" style="-fx-font-weight: bold;" text="1 rue de la Paix" />
+            <Label layoutX="14.0" layoutY="27.0" style="-fx-font-weight: bold;" text="84000 Avignon" />
+            <Button layoutX="174.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="See on map" />
+         </children>
+      </Pane>
+      <ToolBar layoutX="322.0" layoutY="347.0" prefHeight="29.0" prefWidth="311.0" style="-fx-background-color: #666; -fx-border-color: #222;">
+         <items>
+            <Label text="Notes" textFill="WHITE" />
+         </items>
+      </ToolBar>
+      <Pane layoutX="322.0" layoutY="381.0" prefHeight="85.0" prefWidth="311.0" style="-fx-border-color: #666; -fx-border-width: 2px;">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" style="-fx-font-weight: bold;" text="..." />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane prefHeight="354.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
     <top>
         <VBox prefHeight="60.0" prefWidth="551.0" BorderPane.alignment="CENTER">
             <children>
@@ -34,7 +34,7 @@
                         <Button mnemonicParsing="false" text="Add" />
                         <Button mnemonicParsing="false" text="Edit" />
                         <Button mnemonicParsing="false" text="Delete" />
-                        <TextField prefWidth="150.0" text="Search..." translateX="220.0" />
+                        <TextField prefWidth="150.0" promptText="Search..." translateX="465.0" />
                     </items>
                 </ToolBar>
             </children>
@@ -48,7 +48,4 @@
             </items>
         </ToolBar>
     </bottom>
-   <left>
-      <JFXListView BorderPane.alignment="CENTER" />
-   </left>
 </BorderPane>
