@@ -8,6 +8,7 @@ package m1.piu;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Orientation;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
@@ -82,15 +83,29 @@ public class ContactManagerFX extends Application {
 
     public void showCenterPanel() {
 
+        // create vertical splitpane for contact
+        SplitPane contactPanel = new SplitPane();
+        contactPanel.setOrientation(Orientation.VERTICAL);
+        
+        // get contact panes
+        AnchorPane contactList = getPane("FXMLContactList");
+        AnchorPane contactDetails = getPane("FXMLContactDetails");
+        
+        // insert contact panes into vertical splitpane
+        contactPanel.getItems().addAll(contactList, contactDetails);
+        
+
+        // get left main panel
         AnchorPane leftPanel = getPane("FXMLMainPanel");
-        AnchorPane centerPanel = getPane("FXMLContactsList");
+        
+        // create center split pane horizontal
+        SplitPane centerPane = new SplitPane();
+        
+        // insert left panel and contact pane into center pane
+        centerPane.getItems().addAll(leftPanel, contactPanel);
 
-        SplitPane splitPane = new SplitPane();
-        //splitPane.setPrefSize(200, 200);
-        splitPane.getItems().addAll(leftPanel, centerPanel);
-
-        // Set person overview into the center of root layout.
-        rootLayout.setCenter(splitPane);
+        // add final pane into the center of root layout.
+        rootLayout.setCenter(centerPane);
 
     }
 
