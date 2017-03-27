@@ -10,8 +10,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -23,6 +25,7 @@ public class ContactManagerFX extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
 
+    
     public void initRootLayout() {
 
         try {
@@ -34,7 +37,6 @@ public class ContactManagerFX extends Application {
 
             Scene scene = new Scene(rootLayout);
 
-            
             // Set person overview into the center of root layout.
             //rootLayout.setCenter(leftPanel);
             primaryStage.setScene(scene);
@@ -45,8 +47,7 @@ public class ContactManagerFX extends Application {
         }
 
     }
-    
-    
+
     public void showLeftPanel() {
         try {
             // Load pages overview.
@@ -57,43 +58,53 @@ public class ContactManagerFX extends Application {
             // Set person overview into the center of root layout.
             rootLayout.setLeft(leftPanel);
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
-    
-        public void showCenterPanel() {
+
+    public AnchorPane getPane(String name) {
+
+        AnchorPane pane = null;
+
         try {
             // Load pages overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("FXMLContactsList.fxml"));
-            AnchorPane centerPanel = (AnchorPane) loader.load();
-
-            // Set person overview into the center of root layout.
-            rootLayout.setCenter(centerPanel);
-
+            loader.setLocation(getClass().getResource(name + ".fxml"));
+            pane = (AnchorPane) loader.load();
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return pane;
     }
 
+    public void showCenterPanel() {
+
+        AnchorPane leftPanel = getPane("FXMLMainPanel");
+        AnchorPane centerPanel = getPane("FXMLContactsList");
+
+        SplitPane splitPane = new SplitPane();
+        //splitPane.setPrefSize(200, 200);
+        splitPane.getItems().addAll(leftPanel, centerPanel);
+
+        // Set person overview into the center of root layout.
+        rootLayout.setCenter(splitPane);
+
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
 
         this.primaryStage = stage;
         this.primaryStage.setTitle("Contact Manager");
-        this.primaryStage.setResizable(false);
+        //this.primaryStage.setResizable(false);
 
         initRootLayout();
-        
-        showLeftPanel();
-        
+
+        //showLeftPanel();
         showCenterPanel();
-        
 
     }
 
