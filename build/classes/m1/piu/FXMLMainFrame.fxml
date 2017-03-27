@@ -48,4 +48,6 @@
             </items>
         </ToolBar>
     </bottom>
+   <center>
+   </center>
 </BorderPane>

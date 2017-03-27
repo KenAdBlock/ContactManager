@@ -6,14 +6,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="157.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" minWidth="-Infinity" prefHeight="474.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ToolBar prefHeight="30.0" prefWidth="210.0">
-         <items>
-            <Label style="-fx-font-weight: bold;" text="Address books" />
-         </items>
-      </ToolBar>
-      <ListView layoutY="30.0" prefHeight="474.0" prefWidth="200.0" />
-      <ScrollBar layoutX="193.0" layoutY="31.0" orientation="VERTICAL" prefHeight="474.0" prefWidth="14.0" />
+      <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ListView prefHeight="474.0" prefWidth="200.0" />
+            <ToolBar prefHeight="30.0" prefWidth="210.0" StackPane.alignment="TOP_CENTER">
+               <items>
+                  <Label style="-fx-font-weight: bold;" text="Address books" />
+               </items>
+            </ToolBar>
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>
