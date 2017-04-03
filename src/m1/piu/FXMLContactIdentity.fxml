@@ -7,7 +7,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane id="identityPane" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="14.0" layoutY="30.0" text="First Name">
@@ -39,7 +38,10 @@
       <TextField layoutX="115.0" layoutY="70.0" prefHeight="25.0" prefWidth="265.0" />
       <TextField layoutX="115.0" layoutY="110.0" prefHeight="25.0" prefWidth="265.0" />
       <TextField layoutX="115.0" layoutY="190.0" prefHeight="25.0" prefWidth="265.0" />
-      <RadioButton layoutX="115.0" layoutY="150.0" mnemonicParsing="false" text="Male" />
-      <RadioButton layoutX="189.0" layoutY="150.0" mnemonicParsing="false" text="Female" />
+      <RadioButton layoutX="115.0" layoutY="150.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="sex" />
+         </toggleGroup></RadioButton>
+      <RadioButton layoutX="189.0" layoutY="150.0" mnemonicParsing="false" text="Female" toggleGroup="$sex" />
    </children>
 </AnchorPane>
